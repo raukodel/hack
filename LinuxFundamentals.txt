@@ -1,0 +1,304 @@
+SSH Login
+	- ssh [username]@[IP address]
+
+| **Command** | **Description** |
+| --------------|-------------------|
+| `addgroup` | Adds a group to the system. | 
+| `apropos <keyword>` | Searches through man pages' descriptions for instances of a given keyword. | 
+| `apt` | High-level package management command-line utility. | 
+| `aptitude` | Alternative to `apt`. | 
+| `awk` | Pattern scanning and processing language. |
+| `bg` | Puts a process into background. |
+| `cat` | Concatenate and print files. |
+| `cd` | Changes the directory. |
+| `chmod` | Changes permission of a file or directory. |
+| `chown` | Changes the owner and group of a file or directory. |
+| `clear` | Clears the terminal. | 
+| `column` | Command-line based utility that formats its input into multiple columns. |
+| `cp` | Copy files or directories. |
+| `curl` | Command-line utility to transfer data from or to a server. | 
+| `cut` | Removes sections from each line of files. |
+| `delgroup` | Removes a group from the system. | 
+| `dpkg` | Install, remove and configure Debian-based packages. | 
+| `env` | Prints environment or sets and executes a command. | 
+| `fg` | Puts a process into the foreground. | 
+| `find` | Searches for files in a directory hierarchy. | 
+| `gem` | Standard package manager for Ruby. | 
+| `git` | Revision control system command-line utility. | 
+| `grep` | Searches for specific results that contain given patterns. | 
+| `head` | Prints the first ten lines of STDOUT or a file. |
+| `hostname` | Sets or prints the name of the current host system. | 
+| `id` | Returns users identity. | 
+| `ifconfig` | The `ifconfig` utility is used to assign or view an address to a network interface and/or configure network interface parameters. | 
+| `ip` | Ip is a utility to show or manipulate routing, network devices, interfaces, and tunnels. | 
+| `jobs` | Lists all processes that are running in the background. | 
+| `journalctl` | Query the systemd journal. | 
+| `kill` | Sends a signal to a process. | 
+| `less` | An alternative to `more` with more features. | 
+| `locate` | Uses the locale database to find contents on the system. | 
+| `ls` | Lists directory contents. | 
+| `lsblk` | Lists block devices. | 
+| `lsof` | Lists opened files. | 
+| `lspci` | Lists PCI devices. | 
+| `lsusb` | Lists USB devices. | 
+| `man <tool>` | Opens man pages for the specified tool. | 
+| `mkdir` | Creates a directory. | 
+| `more` | Pager that is used to read STDOUT or files. |
+| `mv` | Move or rename files or directories. | 
+| `nano` | Terminal based text editor. | 
+| `netstat` | Shows network status. | 
+| `passwd` | Changes user password. |
+| `pip` | Standard package manager for Python. | 
+| `ps` | Prints a snapshot of the current processes. | 
+| `ps` | Shows process status. | 
+| `pwd` | Returns working directory name. | 
+| `python3 -m http.server` | Starts a Python3 web server on TCP port 8000. | 
+| `sed` | A stream editor for filtering and transforming text. | 
+| `snap` | Install, remove and configure snap packages. |
+| `sort` | Sorts the contents of STDOUT or a file. |
+| `ss` | Another utility to investigate sockets. | 
+| `su` | The `su` utility requests appropriate user credentials via PAM and switches to that user ID (the default user is the superuser).  A shell is then executed. | 
+| `sudo` | Execute command as a different user. | 
+| `systemctl` | Command-line based service and systemd control manager. |
+| `tail` | Prints the last ten lines of STDOUT or a file. | 
+| `touch` | Creates an empty file. |
+| `tr` | Replaces certain characters. | 
+| `tree` | Lists the contents of a directory recursively. |
+| `uname` | Prints operating system name. | 
+| `updatedb` | Updates the locale database for existing contents on the system. |
+| `useradd` | Creates a new user or update default new user information. | 
+| `userdel` | Deletes a user account and related files. |
+| `usermod` | Modifies a user account. | 
+| `wc` | Prints newline, word, and byte counts for a given input. |
+| `wget` | An alternative to `curl` that downloads files from FTP or HTTP(s) server. |
+| `which` | Returns the path to a file or link. |
+| `who` | Displays who is logged in. | 
+| `whoami` | Displays current username. | 
+| `<tool> -h` | Prints the help page of the tool. | 
+
+Linux Structure
+	- /	The top-level directory is the root filesystem and contains all of the files required to boot the operating system before other filesystems are mounted as well as the files required to boot the other filesystems. After boot, all of the other filesystems are mounted at standard mount points as subdirectories of the root.
+	- /bin	Contains essential command binaries.
+	- /boot	Consists of the static bootloader, kernel executable, and files required to boot the Linux OS.
+	- /dev	Contains device files to facilitate access to every hardware device attached to the system.
+	- /etc	Local system configuration files. Configuration files for installed applications may be saved here as well.
+	- /home	Each user on the system has a subdirectory here for storage.
+	- /lib	Shared library files that are required for system boot.
+	- /media	External removable media devices such as USB drives are mounted here.
+	- /mnt	Temporary mount point for regular filesystems.
+	- /opt	Optional files such as third-party tools can be saved here.
+	- /root	The home directory for the root user.
+	- /sbin	This directory contains executables used for system administration (binary system files).
+	- /tmp	The operating system and many programs use this directory to store temporary files. This directory is generally cleared upon system boot and may be deleted at other times without any warning.
+	- /usr	Contains executables, libraries, man files, etc.
+	- /var	This directory contains variable data files such as log files, email in-boxes, web application related files, cron files, and more.
+
+Prompt Description
+	- <username>@<hostname><current working directory>$
+
+Getting Help
+	- man <tool>
+	- <tool> -h
+	- apropos <keyword>
+
+System Information
+	- hostname
+	- whoami
+	- id
+	- uname -a
+	- uname -r
+
+	Find out the machine hardware name and submit it as the answer.
+	- uname -m
+
+	What is the path to htb-student's home directory?
+	- pwd
+
+	What is the path to the htb-student's mail?
+	- cd /var
+	- ls
+
+	Which shell is specified for the htb-student user?
+	- cat /etc/passwd
+
+	Which kernel version is installed on the system? (Format: 1.22.3)
+	- uname -r
+
+	What is the name of the network interface that MTU is set to 1500?
+	- ifconfig
+
+User Management
+	- sudo cat /etc/shadow
+
+	Which option needs to be set to create a home directory for a new user using "useradd" command?
+	- useradd -m
+
+	Which option needs to be set to lock a user account using the "usermod" command? (long version of the option)
+	- usermod -L or --lock
+
+	Which option needs to be set to execute a command as a different user using the "su" command? (long version of the option)
+	- su --command
+
+Package Management
+	- cat /etc/apt/sources.list.d/parrot.list
+	- apt-cache search impacket
+	- apt list --installed
+
+Service and Process Management
+	- systemctl start ssh
+	- systemctl status ssh
+	- systemctl enable ssh
+	- ps -aux | grep ssh
+	- sudo ps -a
+	- kill 9 <PID> 
+
+	Use "systemctl" command to list all units of services and submit the unit name with the description "Load AppArmor profiles" as the answer.
+	- systemctl
+
+Working with Web Services
+	- apt install apache2 -y
+	- curl http://localhost
+	- wget http://localhost
+	- python3 -m http.server
+
+	Find a way to start a simple HTTP server using "npm". Submit the command that starts the web server on port 8080 (use the short argument to specify the port number).
+	- npm http-server -p 8080
+
+	Find a way to start a simple HTTP server using "php". Submit the command that starts the web server on the localhost (127.0.0.1) on port 8080.
+	- php -S 127.0.0.1:8080
+
+Navigation
+	- pwd
+	- ls 
+	- ls -l /var/
+	- cd -
+
+	What is the name of the hidden "history" file in the htb-user's home directory?
+	- ls -al
+
+	 What is the index number of the "sudoers" file in the "/etc" directory?
+	- ls -i
+
+Working with Files and Directories
+	- touch <name>
+	- mkdir <name>
+	- mv <file/directory> <renamed file/directory>
+	- cp Storage/readme.txt Storage/local/
+
+	What is the name of the last modified file in the "/var/backups" directory?
+	- ls -lt
+
+	What is the inode number of the "shadow.bak" file in the "/var/backups" directory?
+	- ls -il | grep shadow.bak
+
+Editing Files
+	- nano notes.txt The caret (^) stands for our "[CTRL]" key. For example, if we press [CTRL + W], a "Search:" line appears at the bottom of the editor, where we can enter the word or words we are looking for.
+	- vim When we have the Vim editor open, we can go into command mode by typing ":" and then typing "q" to close Vim.
+	- vimtutor
+
+Find Files and Directories
+	- which python
+	- f ind <location> <options>
+	- find / -type f -name *.conf -user root -size +20k -newermt 2020-03-03 -exec ls -al {} \; 2>/dev/null
+
+	What is the name of the config file that has been created after 2020-03-03 and is smaller than 28k but larger than 25k?
+	- find / -name *.conf -size +25k -size -28k -newermt 2020-03-03 2>/dev/null
+
+	How many files exist on the system that have the ".bak" extension?
+	- find / -name *.bak 2>/dev/null | wc -l
+
+	Submit the full path of the "xxd" binary.
+	- locate xxd
+
+File Descriptors and Redirections
+	- find /etc/ -name shadow
+	- find /etc/ -name shadow 2>/dev/null
+	- find /etc/ -name shadow 2>/dev/null > results.txt
+
+	How many files exist on the system that have the ".log" file extension?
+	- find / -name *.log 2>/dev/null | wc -l
+
+	How many total packages are installed on the target system?
+	- dpkg -l | grep -c 'ii'
+
+Filter Contents
+	- cat /etc/passwd | grep -v "false\|nologin" | cut -d":" -f1
+
+	How many services are listening on the target system on all interfaces? (Not on localhost and IPv4 only)
+	- netstat -tunleep4 | grep -V "12\.0\.0"
+
+	Determine what user the ProFTPd server is running under. Submit the username as the answer.
+	- cd /etc/proftpd
+	- cat proftpd.conf
+
+	Use cURL from your Pwnbox (not the target machine) to obtain the source code of the "https://www.inlanefreight.com" website and filter all unique paths of that domain. Submit the number of these paths as the answer.
+	- curl https://www.inlanefreight.com > test.txt
+	- cat test.txt | tr " " "\n" | cut -d "'" -f2 | cut -d '"' -F2 | grep "www.inlanefreight.com" | wc -l
+
+Permission Management
+	Sergio Seligmann Rodrigues@htb[/htb]$ ls -l /etc/passwd
+
+	- rwx rw- r--   1 root root 1641 May  4 23:42 /etc/passwd
+	- --- --- ---   |  |    |    |   |__________|
+	|  |   |   |    |  |    |    |        |_ Date
+	|  |   |   |    |  |    |    |__________ File Size
+	|  |   |   |    |  |    |_______________ Group
+	|  |   |   |    |  |____________________ User
+	|  |   |   |    |_______________________ Number of hard links
+	|  |   |   |_ Permission of others (read)
+	|  |   |_____ Permissions of the group (read, write)
+	|  |_________ Permissions of the owner (read, write, execute)
+	|____________ File type (- = File, d = Directory, l = Link, ... )
+
+	- chmod a+r shell && ls -l shell
+	- chmod 754 shell && ls -l shell
+	- chown <user>:<group> <file/directory>
+	- chown root:root shell && ls -l shell
+
+Shortcuts
+	Auto-Complete
+	[TAB] - Initiates auto-complete. This will suggest to us different options based on the STDIN we provide. These can be specific suggestions like directories in our current working environment, commands starting with the same number of characters we already typed, or options.
+
+	Cursor Movement
+	[CTRL] + A - Move the cursor to the beginning of the current line.
+
+	[CTRL] + E - Move the cursor to the end of the current line.
+
+	[CTRL] + [←] / [→] - Jump at the beginning of the current/previous word.
+
+	[ALT] + B / F - Jump backward/forward one word.
+
+	Erase The Current Line
+	[CTRL] + U - Erase everything from the current position of the cursor to the beginning of the line.
+
+	[Ctrl] + K - Erase everything from the current position of the cursor to the end of the line.
+
+	[Ctrl] + W - Erase the word preceding the cursor position.
+
+	Paste Erased Contents
+	[Ctrl] + Y - Pastes the erased text or word.
+
+	Ends Task
+	[CTRL] + C - Ends the current task/process by sending the SIGINT signal. For example, this can be a scan that is running by a tool. If we are watching the scan, we can stop it / kill this process by using this shortcut. While not configured and developed by the tool we are using. The process will be killed without asking us for confirmation.
+
+	End-of-File (EOF)
+	[CTRL] + D - Close STDIN pipe that is also known as End-of-File (EOF) or End-of-Transmission.
+
+	Clear Terminal
+	[CTRL] + L - Clears the terminal. An alternative to this shortcut is the clear command you can type to clear our terminal.
+
+	Background a Process
+	[CTRL] + Z - Suspend the current process by sending the SIGTSTP signal.
+
+	Search Through Command History
+	[CTRL] + R - Search through command history for commands we typed previously that match our search patterns.
+
+	[↑] / [↓] - Go to the previous/next command in the command history.
+
+	Switch Between Applications
+	[ALT] + [TAB] - Switch between opened applications.
+
+	Zoom
+	[CTRL] + [+] - Zoom in.
+
+	[CTRL] + [-] - Zoom out.
