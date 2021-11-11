@@ -20,3 +20,7 @@ NTFS vs. Share Permissions
 
 	What is the name of the utility that can be used to view logs made by a Windows system? (Format: 2 words, 1 space, not case sensitive)
 	- Event Viewer
+
+Windows Services & Processes
+	Identify one of the non-standard update services running on the host. Submit the full name of the service executable (not the DisplayName) as your answer.
+	- Get-Service | ? {$_.Status -eq "Running"}
