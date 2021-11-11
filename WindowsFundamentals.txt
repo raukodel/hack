@@ -1,5 +1,5 @@
 RDP 
-	- xfreerdp /v:<targetIp> /u:htb-student /p:Password
+	- xfreerdp /v:targetIp /u:htb-student /p:Password
 
 Introduction to Windows
 	- Get-WmiObject -Class win32_OperatingSystem | select Version,BuildNumber
