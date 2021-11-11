@@ -1,0 +1,22 @@
+RDP 
+	- xfreerdp /v:<targetIp> /u:htb-student /p:Password
+
+Introduction to Windows
+	- Get-WmiObject -Class win32_OperatingSystem | select Version,BuildNumber
+
+Operating System Structure
+	- tree c:\ /f | more
+
+File System
+	- icacls c:\windows
+	- icacls c:\users /grant joe:f
+	
+	What system user has full control over the c:\users directory?
+	- icacls c:\Users
+
+NTFS vs. Share Permissions
+	What protocol discussed in this section is used to share resources on the network using Windows? (Format: case sensitive)
+	- SMB
+
+	What is the name of the utility that can be used to view logs made by a Windows system? (Format: 2 words, 1 space, not case sensitive)
+	- Event Viewer
